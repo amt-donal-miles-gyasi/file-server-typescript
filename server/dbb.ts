@@ -6,8 +6,7 @@ export const client = new Pool({
     host: host,
     password: password,
     port: port,
-    database: database,
-    ssl: 'true'
+    database: database
 });
 
 client.connect();
