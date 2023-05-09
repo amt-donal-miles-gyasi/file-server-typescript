@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useState, ChangeEvent, FormEvent } from "react";
+const SERVERURL = process.env.SERVER_URL
 
 const Userpage: React.FC = () => {
   const [file, setfile] = useState<FileList | null>(null);
@@ -25,7 +26,7 @@ const Userpage: React.FC = () => {
   const onSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
-      const ans = await axios.post(`http://localhost:5000/api/put-files`, data);
+      const ans = await axios.post(`${SERVERURL}/api/put-files`, data);
       console.log(ans);
       setValues({
         title: "",

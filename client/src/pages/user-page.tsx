@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import { NavLink, Outlet } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { unauthenticateUser } from '../redux/slices/authSlice';
+const SERVERURL = process.env.SERVER_URL
 
 
 
@@ -58,7 +59,7 @@ const Dashboard2 = ()=>{
 
 
         const handleClick= (id: number)=>{
-            window.open(`http://localhost:5000/api/get-file/${id}`)//download file
+            window.open(`${SERVERURL}/api/get-file/${id}`)//download file
             
         }
 

@@ -1,28 +1,29 @@
 import axios from 'axios';
+const SERVERURL = process.env.SERVER_URL
 
 axios.defaults.withCredentials = true
 
 export async function onRegistration(registrationData: any) {
   return await axios.post(
-    'http://localhost:5000/api/register',
+   `${SERVERURL}/api/register`,
     registrationData
   )
 }
 
 export async function onLogin(loginData : any) {
-  return await axios.post('http://localhost:5000/api/login', loginData)
+  return await axios.post(`${SERVERURL}/api/login`, loginData)
 }
 
 export async function onLogout() {
-  return await axios.get('http://localhost:5000/api/logout')
+  return await axios.get(`${SERVERURL}/api/logout`)
 }
 
 export async function fetchProtectedInfo() {
-  return await axios.get('http://localhost:5000/api/protected')
+  return await axios.get(`${SERVERURL}/api/protected`)
 }
 
 export async function resetPassword(email: any) {
-  return await axios.post('http://localhost:5000/api/reset-password', email)
+  return await axios.post(`${SERVERURL}/api/reset-password`, email)
 }
 
 // export async function changePassword(id, token, password, changePassword){

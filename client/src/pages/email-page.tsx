@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState, ChangeEvent, FormEvent } from "react"
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
+const SERVERURL = process.env.SERVER_URL
 
 
 
@@ -21,7 +22,7 @@ const EmailPage =()=>{
     const onSubmit = async(e: FormEvent)=>{
         e.preventDefault()
         try {
-            const res = await axios.post(`http://localhost:5000/api/put-files/${id}`, {
+            const res = await axios.post(`${SERVERURL}/api/put-files/${id}`, {
                 to: values.to,
                 from: values.from,
                 message: values.message

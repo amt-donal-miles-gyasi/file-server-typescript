@@ -2,6 +2,7 @@ import React , { useState , useEffect} from 'react';
 // import { changePassword } from '../api/auth'; 
 import { NavLink , useParams} from 'react-router-dom';
 import axios from 'axios';
+const SERVERURL = process.env.SERVER_URL
 
 const PasswordConfirm = ()=>{
     const [values, setValues] = useState({ 
@@ -23,7 +24,7 @@ const PasswordConfirm = ()=>{
     useEffect(()=>{
         async function fetchData() {
             
-            const {data} = await axios.get(`http://localhost:5000/api/reset-password/${id}/${token}`)
+            const {data} = await axios.get(`${SERVERURL}/api/reset-password/${id}/${token}`)
 
             console.log(data.verified, data)
             setLoading(data.verified)
@@ -36,7 +37,7 @@ const PasswordConfirm = ()=>{
         e.preventDefault()
 
         try {
-            const  {data}  = await axios.post(`http://localhost:5000/api/reset-password/${id}/${token}`, {
+            const  {data}  = await axios.post(`${SERVERURL}/api/reset-password/${id}/${token}`, {
                 "password": values.password,
                 "confirmPassword": values.confirmPassword
               })
