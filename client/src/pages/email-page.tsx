@@ -33,7 +33,7 @@ const EmailPage =()=>{
                 to: '', 
                 message: ''
             })
-            
+             
         } catch (error: any) {
             console.log(error.response)
         }

@@ -1,5 +1,5 @@
 import axios from 'axios';
-const SERVERURL = process.env.SERVER_URL
+const SERVERURL = process.env.SERVER_URL 
 
 axios.defaults.withCredentials = true
 

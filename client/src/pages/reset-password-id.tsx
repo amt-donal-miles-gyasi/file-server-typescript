@@ -68,7 +68,7 @@ const PasswordConfirm = ()=>{
                     className='form-control'
                     id='password'
                     name='password'
-                    placeholder='password'
+                    placeholder='password' 
                     required
                 />
                 </div>
