@@ -7,7 +7,7 @@ CREATE TABLE users(
     roles varchar(10) default 'user'
 );
 
-CREATE TABLE filess(
+CREATE TABLE files(
     id serial primary key,
     title varchar(150) NULL default 'none',
     description varchar(300) NULL default 'none',
