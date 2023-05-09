@@ -49,7 +49,7 @@ const Login = () => {
 
 
     } catch (error: any) {
-      // console.log(error.response.data.errors[0].nestedErrors[0].msg)
+      console.log(error.response.datag)
       setError(error.response.data.errors[0].nestedErrors[0].msg)
     }
   }
