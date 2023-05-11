@@ -5,6 +5,7 @@ import { useDispatch , useSelector} from 'react-redux'
 import { authenticateUser } from '../redux/slices/authSlice';
 import { NavLink } from 'react-router-dom';
 import { state } from '../components/navbar'
+const SERVERURL = process.env.REACT_APP_SERVER_URL
 
 
 
@@ -17,6 +18,8 @@ const Login = () => {
   })
   const [error, setError] = useState(false);
   const { isAuth } = useSelector((state: state) => state.auth)
+  console.log(process.env)
+  console.log(SERVERURL)
  
 
   const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,6 +42,7 @@ const Login = () => {
       if(isAuth&& role === 'admin'){
        console.log(data.role);
         //  navigate ('/dashboard' )
+
          
         
       }else{

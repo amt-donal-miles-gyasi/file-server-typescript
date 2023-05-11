@@ -5,7 +5,7 @@ import Layout from '../components/layout'
 import { NavLink, Outlet } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import { unauthenticateUser } from '../redux/slices/authSlice';
-const SERVERURL = process.env.SERVER_URL
+const SERVERURL = process.env.REACT_APP_SERVER_URL
 
 
  

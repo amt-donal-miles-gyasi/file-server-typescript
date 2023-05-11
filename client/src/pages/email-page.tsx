@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, ChangeEvent, FormEvent } from "react"
 import { useParams } from "react-router-dom";
-const SERVERURL = process.env.SERVER_URL
+const SERVERURL = process.env.REACT_APP_SERVER_URL
 
 
 

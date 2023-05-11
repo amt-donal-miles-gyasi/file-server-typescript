@@ -2,7 +2,7 @@ import React , { useState , useEffect} from 'react';
 // import { changePassword } from '../api/auth'; 
 import { NavLink , useParams} from 'react-router-dom';
 import axios from 'axios';
-const SERVERURL = process.env.SERVER_URL
+const SERVERURL = process.env.REACT_APP_SERVER_URL
 
 const PasswordConfirm = ()=>{
     const [values, setValues] = useState({ 
