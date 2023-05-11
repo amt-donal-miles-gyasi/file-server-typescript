@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useState, ChangeEvent, FormEvent } from "react";
-const SERVERURL = process.env.SERVER_URL
+const SERVERURL = process.env.REACT_APP_SERVER_URL
 
 const Userpage: React.FC = () => {
   const [file, setfile] = useState<FileList | null>(null);
